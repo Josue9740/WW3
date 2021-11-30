@@ -205,7 +205,7 @@ else
         [ "$OK" = 'n' ] || [ "$OK" = 'N' ]
   do
     echo -n "   Update settings ? [y/n] "
-    "$OK" = 'y'
+    $OK = 'y'
     case $OK in
      'y'|'Y') do_set='y' ;;
      'n'|'N') do_set='n' ;;
