@@ -205,7 +205,7 @@ else
         [ "$OK" = 'n' ] || [ "$OK" = 'N' ]
   do
     echo -n "   Update settings ? [y/n] "
-    read OK
+    OK = 'y'
     case $OK in
      'y'|'Y') do_set='y' ;;
      'n'|'N') do_set='n' ;;
@@ -231,7 +231,7 @@ then
     until [ "$OK" = 'y' ]
     do
       echo -n "      Scratch space [$temp_dir] : "
-      instr="$NULL" ; read instr
+      instr="$NULL" 
       if [ -n "$instr" ]
       then
         temp_dir="$instr"
@@ -252,7 +252,7 @@ then
     done
 
     echo -n "      Save source code files (*.f)  [$source] : "
-    instr="$NULL" ; read instr
+    instr="$NULL"
     if [ -n "$instr" ]
     then
       if [ "$instr" = 'yes' ] || [ "$instr" = 'YES' ]
@@ -264,7 +264,7 @@ then
     fi
 
     echo -n "      Save listing files  [$list] : "
-    instr="$NULL" ; read instr
+    instr="$NULL"
     if [ -n "$instr" ]
     then
       if [ "$instr" = 'yes' ] || [ "$instr" = 'YES' ]
@@ -281,7 +281,7 @@ then
     echo "      Save sources             : $source"
     echo "      Save listings            : $list"
     echo -n "   New settings OK ? [y/n] "
-    read OK
+    OK='y'
   done
 
 fi
